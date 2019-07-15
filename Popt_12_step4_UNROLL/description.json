@@ -1,0 +1,30 @@
+{
+    "runtime":      ["OpenCL"],
+    "example":      "BinomialModel: Popt_12_step4_UNROLL",
+    "overview":     [ "HW Kernel Optimization: Unrolling Loops (1 Compute Unit)" ],
+    "key_concepts": [ "SDAccel Optimization", "HLS C Kernel"],
+    "os": [
+        "Linux"
+    ],
+    "host_exe": "host",
+    "cmd_args": "xilinx_u200_xdma_201830_1 ../binary_container_1.xclbin hw ../../src/Test_Config_Files/test_config_FULL.txt ../../src/Test_Config_Files/test_config_HW_Emu.txt ../../src/sw_hw_config.txt",
+    "containers" : [ 
+     {
+      "name":         "binary_container_1",
+      "ldclflags":    "-O2",
+      "accelerators": [
+          {          
+            "name":              "K_americanPut_0", 
+            "location":          "src/K0.cpp",
+            "clflags":           "-O2"
+          }
+        ]
+      }
+    ],
+    "contributors" : [
+        {
+            "group": "Xilinx",
+            "url" : "http://www.xilinx.com"
+        }
+    ] 
+}

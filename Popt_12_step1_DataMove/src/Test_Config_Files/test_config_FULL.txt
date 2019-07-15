@@ -1,0 +1,55 @@
+# /*****************************************************************************
+#
+# Copyright (c) 2019, Xilinx, Inc.
+# 
+#    Licensed under the Apache License, Version 2.0 (the "License");
+#    you may not use this file except in compliance with the License.
+#    You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS,
+#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#    See the License for the specific language governing permissions and
+#    limitations under the License.
+#
+# ******************************************************************************/
+
+# --------------------------------------------------------------------------------------------------------------
+#                          Binomial settings                             ||    Test Vector Configurations     ||
+# -----------------------------------------------------------------------++-----------------------------------++
+# Company |    T   |    S   |    K   |    r   |  sigma |    q   |    n   ||      K_Step     |   NB_OF_TESTS   ||
+# --------+--------+--------+--------+--------+--------+--------+--------++-----------------+-----------------++
+  Comp_1       1      110.0    100.0    0.025      0.2      0.1     1024           1.0               64         
+  Comp_2       1       80.0     85.0    0.025      0.2      0.1     1024           1.0               64         
+  Comp_3       1       32.0     33.0    0.025      0.2      0.1     1024           1.0               64         
+  Comp_4       1       55.0     60.0    0.025      0.2      0.1     1024           1.0               64         
+# --------+--------+--------+--------+--------+--------+--------+--------++-----------------+-----------------++
+
+
+# ==============================================================================================================
+# Notes:
+# ==============================================================================================================
+
+# .................................
+# Binomial settings
+# .................................
+#   T                 type(int)     : Expiration Time
+#   S                 type(float)   : Stock Price
+#   K                 type(float)   : Strike Price
+#   r                 type(float)   : Risk-free rate
+#   sigma             type(float)   : Volatility
+#   q                 type(float)   : Dividend yield
+#   n                 type(int)     : Height of the Binomial tree
+
+# .................................
+# Test Vector Configurations
+# .................................
+#   K_Step            type(float)   : Strike step value. Strike value will be increased for each test vector
+#                                   : K[0] = K
+#                                   : K[i] = K[i-1] + K_Step, for i = [1...NB_OF_TESTS-1]
+#   NB_OF_TESTS       type(int)     : Number of test vectors to run
+
+# ==============================================================================================================
+
