@@ -1,0 +1,7 @@
+1-Thread
+========
+xilinx_u200_xdma_201830_1 ../binary_container_1.xclbin sw ../../src/Test_Config_Files/test_config_FULL.txt ../../src/Test_Config_Files/test_config_HW_Emu.txt ../../src/sw_hw_config_1_Thread.txt
+
+M-Thread
+========
+xilinx_u200_xdma_201830_1 ../binary_container_1.xclbin sw ../../src/Test_Config_Files/test_config_FULL.txt ../../src/Test_Config_Files/test_config_HW_Emu.txt ../../src/sw_hw_config_M_Thread.txt

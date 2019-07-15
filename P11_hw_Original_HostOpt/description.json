@@ -1,0 +1,17 @@
+{
+    "runtime":      ["OpenCL"],
+    "example":      "BinomialModel: P11_hw_Original_HostOpt",
+    "overview":     [ "Optimized Host with Original HW Kernel: 1 Compute Unit" ],
+    "key_concepts": [ "SDAccel Optimization", "HLS C Kernel"],
+    "os": [
+        "Linux"
+    ],
+    "host_exe": "host",
+    "cmd_args": "xilinx_u200_xdma_201830_1 ${project_loc:P10_hw_Original}/${config_name:P11_hw_Original_HostOpt}/binary_container_1.xclbin hw ../../src/Test_Config_Files/test_config_FULL.txt ../../src/Test_Config_Files/test_config_HW_Emu.txt ../../src/sw_hw_config.txt",
+    "contributors" : [
+        {
+            "group": "Xilinx",
+            "url" : "http://www.xilinx.com"
+        }
+    ] 
+}
