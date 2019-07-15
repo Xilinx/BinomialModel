@@ -1,0 +1,44 @@
+{
+    "runtime":      ["OpenCL"],
+    "example":      "BinomialModel: P14_hw_KOpt_12CU_3DDRs",
+    "overview":     [ "Optimized HW Kernel: 3 Kernels, 12 Compute Units, 3 DDRs" ],
+    "key_concepts": [ "SDAccel Optimization", "HLS C Kernel"],
+    "os": [
+        "Linux"
+    ],
+    "host_exe": "host",
+    "cmd_args": "xilinx_u200_xdma_201830_1 ../binary_container_1.xclbin hw ../../src/Test_Config_Files/test_config_FULL.txt ../../src/Test_Config_Files/test_config_HW_Emu.txt ../../src/sw_hw_config.txt",
+    "containers" : [ 
+     {
+      "name":         "binary_container_1",
+      "ldclflags":    "-O2 --sp K_americanPut_0_1.IN_Data:DDR[0] --sp K_americanPut_0_1.Res:DDR[0] --sp K_americanPut_0_2.IN_Data:DDR[0] --sp K_americanPut_0_2.Res:DDR[0] --sp K_americanPut_0_3.IN_Data:DDR[0] --sp K_americanPut_0_3.Res:DDR[0] --sp K_americanPut_0_4.IN_Data:DDR[0] --sp K_americanPut_0_4.Res:DDR[0]  --sp K_americanPut_1_1.IN_Data:DDR[2] --sp K_americanPut_1_1.Res:DDR[2] --sp K_americanPut_1_2.IN_Data:DDR[2] --sp K_americanPut_1_2.Res:DDR[2] --sp K_americanPut_1_3.IN_Data:DDR[2] --sp K_americanPut_1_3.Res:DDR[2] --sp K_americanPut_1_4.IN_Data:DDR[2] --sp K_americanPut_1_4.Res:DDR[2] --sp K_americanPut_2_1.IN_Data:DDR[3] --sp K_americanPut_2_1.Res:DDR[3] --sp K_americanPut_2_2.IN_Data:DDR[3] --sp K_americanPut_2_2.Res:DDR[3] --sp K_americanPut_2_3.IN_Data:DDR[3] --sp K_americanPut_2_3.Res:DDR[3] --sp K_americanPut_2_4.IN_Data:DDR[3] --sp K_americanPut_2_4.Res:DDR[3] ",
+      "accelerators": [
+          {          
+            "name":              "K_americanPut_0", 
+            "location":          "src/K0.cpp",
+            "num_compute_units": 4,
+            "clflags":           "-O2"
+          },
+          {          
+            "name":              "K_americanPut_1", 
+            "location":          "src/K1.cpp",
+            "num_compute_units": 4,
+            "clflags":           "-O2"
+          },
+          {          
+            "name":              "K_americanPut_2", 
+            "location":          "src/K2.cpp",
+            "num_compute_units": 4,
+            "clflags":           "-O2"
+          }
+        ]
+      }
+    ],
+
+    "contributors" : [
+        {
+            "group": "Xilinx",
+            "url" : "http://www.xilinx.com"
+        }
+    ] 
+}
