@@ -14,7 +14,7 @@ This original algorithm was rewritten in a C/C++ programming language by using s
 
 At the beginning, you will use the original C/C++ Binomial Model description to target both Xilinx Alveo card and x68 CPU. You will observe that a fully sequential execution of the application on the Alveo card outperforms the single threaded CPU implementation by the factor of <b>8.9x</b>.
 
-Then by using various optimization methods you will be able to increase Alveo based performance by the factor of <b>60x</b>. This is represented in the following reduced summary table:
+Then by using various optimization methods you will be able to increase Alveo based performance by the factor of <b>60.8x</b>. This is represented in the following reduced summary table:
 
 Design    | CPU (ms)           | Alveo (ms) | Alveo Gain vs. CPU |
 ----------|-------------------:|-----------:|-------------------:|
